@@ -1,0 +1,230 @@
+:root {
+  --col-background: rgb(255, 250, 242);
+  --col-header: linear-gradient(to bottom, white, rgb(255, 250, 242));
+  --col-main-article: white;
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+    body {
+      /* width: 95%; */
+      /* max-width: 960px; */
+      /* background-color: var(--col-background); */
+      scroll-behavior: smooth;
+      background-color: white;
+      /* padding: 0.5rem; */
+    }
+
+    button {
+      font-size: 18px;
+      line-height: 1.5;
+      justify-items: flex-start;
+    }
+
+    header {
+    background: var(--col-header);
+    height: 100px;
+    }
+
+    h1 {
+    border-bottom: 0.5px solid black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    text-align: left;
+    line-height: 100px;
+    margin: 0;
+    }
+
+    h2 {
+    border-bottom: 0.5px solid black;
+    line-height: 2rem;
+    margin-top: 2rem;
+    }
+
+    p {
+      line-height: 1.5;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: justify;
+      padding-bottom: 1rem;
+      padding: 1rem;
+    }
+
+    li {
+      text-indent: 10px;
+      list-style-position: inside;
+      padding: 5px;
+    }
+
+    .panel ul {
+      list-style: none;
+    
+    }
+
+    ul {
+      list-style-type: circle;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    a {
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    table {
+      text-align: left;
+      margin: 0.5rem;
+      padding: 0.5rem;
+    }
+    .Your-Father {
+      /* //elemento padre del artículo */
+      background-color: var(--col-background) ;
+    }
+    .toolbox {
+      height: 100px;
+      display: flex;
+      align-items: center;   /*controla dónde se ubican los elementos flexibles en el eje transversal.*/
+      justify-content: space-around;  /*controla dónde se ubican los elementos flexibles sobre el eje principal.*/
+      margin: 1rem;
+      padding: 1rem;
+    }
+    
+    .nosplit {
+      white-space: nowrap;
+    }
+
+    .boxes {
+      width:fit-content;
+      background-color: var(--col-background);
+      border: 0.5px solid rgb(101, 104, 106);
+      border-radius: 2px;
+      margin: 10px;
+      padding: 10px;
+    }
+
+    .block {
+      min-width: 20vw;
+      float: right;
+      margin-left: 2rem;
+    }
+
+
+    div.block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .wiki {
+      display:block;
+      min-width: 120%;
+      height: auto;
+      padding: 1.5rem;
+    }
+
+    img.logo {
+      max-width: 80%;
+      height: auto;
+      margin: 1rem auto;
+      padding: 1rem;
+    }
+    /* EL MODELO FLEXIBLE: cuando los elementos se presentan como cajas flexibles se distribuyen con respecto de dos ejes el main axis y el cross axis.                 cross start
+    inicio del eje transversal
+    
+  main     inicio                                        final          main end
+  start    principal             +                    principal    
+     
+                          extremo cruzado
+                            cross end
+
+  
+                            */
+  section {
+    display: flex; /*convierte en flexible al contenedor*/
+    flex-direction: row;
+    /* especifica en qué dirección corre el eje principal */
+    flex-wrap:wrap;
+    
+  }
+  article {
+  padding: 10px;
+  margin: 10px;
+  flex: 1 4rem;
+  }
+  
+  article:nth-of-type(2) {
+    flex: 4 200px;
+  }
+    /* Add your flexbox CSS below here */
+
+footer {
+  margin: auto;
+  padding: 3rem;
+}
+
+article.login {
+  display: flex;
+  margin-right: 2px;
+  justify-content: flex-end;
+}
+
+article.panel {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+
+article.main-article {
+  background-color: var(--col-main-article);
+  border-top: 0.5px solid black;
+  border-left: 0.5px solid black;
+}
+
+.ListaDeReferencias {
+  column-count: 2;
+  column-gap: normal;
+}
+
+.Referencias ol {
+  list-style-type: decimal;
+}
+
+.Referencias li {
+  font-size: 0.75rem;
+}
+
+/* || SMALL */
+@media screen and (max-width: 576px) {
+  main {
+    justify-content: center;
+    flex-flow: column wrap;
+    
+  }
+
+  .toolbox {
+    display: flex;
+    align-items: center;   /*controla dónde se ubican los elementos flexibles en el eje transversal.*/
+    justify-content: space-around;  /*controla dónde se ubican los elementos flexibles sobre el eje principal.*/
+    /* margin: 3em; */
+  }
+
+  .panel li {
+    display: block;
+    float: left;
+    text-align: center;
+  }
+
+  article.main-article {
+   border: 0;
+  }
+}

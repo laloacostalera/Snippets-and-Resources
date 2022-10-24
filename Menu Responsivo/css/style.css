@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0.5;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+
+nav {
+    border: 1px solid #333;
+    border-radius: 2rem;
+    margin: 0 auto 1rem;
+    max-width: 600px;
+    font-size: 3rem;
+    line-height: 7rem;
+/* we need to define border [<line-width> || <line-style> || <color>] color #333
+then make the borders of the nav rounded at 2rem.
+Then define the margin with no space in the top, automatic in the sides and 1rem in the bottom (all in one sentence)
+define the max width of the nav at 600px
+set the size for the typography to 3rem 
+and set the height of the line to 7rem */
+}
+
+h2 {
+    padding: 1rem;
+    background-color: gold;
+    border-radius: 2rem 2rem 0 0;
+/* set the padding to 1rem
+choose gold as the color for the back
+add a radius to the element so it fits with the nav radius */
+/*h2 it´s a block level element so we need to adjust the border radius for it to match the nav border radius */
+ }
+
+ul {
+    list-style-type: none   /* take off the style type; */
+}
+
+li {
+    border-top: 1px solid #333;
+    /* add a border top of 1px solid #333*/;
+}
+
+li a {
+    display: block;    /* a (anchor tag) is an inline element, in order for it to take the full size of the menu as a box that highlights we need to convert it to display:block */
+
+}
+
+li a,
+li a:visited {
+    text-decoration: none;
+    color: #333;
+
+
+    /* take of the disc from the list and add a subtle color to the text */
+ 
+}
+
+li a:hover,
+li a:focus {
+    background-color: #333;
+    color: whitesmoke;
+    cursor: pointer;
+    /* set a background color and a text color inverted and decide wich kind of pointer you'll like */
+}
+
+li:last-child a {
+    border-radius: 0 0 2rem 2rem;
+/* correct the radius of the border */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Like a space probe entering to a planet's orbit we go from the outside to the inside
+1) Reset the css with *{]   
+2) Go to the body: a. margin ..
+3) The nav element
+    */
